@@ -1,3 +1,43 @@
 <resources>
-    <string name="app_name">Ehealth_patient_app</string>
+    <string name="app_name">E-health</string>
+    <string name="app_name_short">E-health</string>
+
+    <string name="hint_name">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_user_name">Name</string>
+    <string name="hint_last_name_1">Last name 1</string>
+    <string name="hint_last_name_2">Last name 2</string>
+    <string name="hint_allergies">Allergies</string>
+    <string name="hint_medicines">Medicines</string>
+    <string name="hint_surgeries">Surgeries</string>
+    <string name="hint_date">Date</string>
+    <string name="hint_time">Time</string>
+    <string name="hint_doctor">Doctor</string>
+    <string name="hint_speciality">Speciality</string>
+    <string name="hint_comment">Comments</string>
+
+    <string name="label_forgot_password">Forgot Password</string>
+    <string name="label_sign_up">Sign up</string>
+
+    <string name="text_login">Sign in</string>
+    <string name="text_registration">Sign up</string>
+    <string name="text_recover_password_button">Send mail</string>
+    <string name="text_send_email_again">Send mail again</string>
+    <string name="text_cancel_button">Cancel</string>
+    <string name="text_sign_up">Not set up yet?</string>
+    <string name="text_recover_password">you will receive an email with your password shortly</string>
+    <string name="text_video_conference">Start e-visit</string>
+    <string name="text_schedule_appointment">Schedule appointment</string>
+    <string name="text_scheduled_appointments">My appointments </string>
+    <string name="text_send">Send</string>
+    <string name="text_accept">Accept</string>
+    <string name="title_activity_nav">NavActivity</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
 </resources>

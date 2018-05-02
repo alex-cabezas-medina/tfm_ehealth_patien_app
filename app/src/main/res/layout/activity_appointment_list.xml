@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.acabezas.ehealth_patient_app.appointment_list.AppointmentListActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/appointment_list"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/schedule_appointment"
+        style="@style/AppTheme.ButtonBase"
+        android:layout_marginBottom="@dimen/field_margin_separator"
+        android:layout_marginTop="@dimen/item_margin_separator"
+        android:text="@string/text_schedule_appointment"
+        />
+
+</LinearLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/screen_padding"
+        android:paddingStart="@dimen/screen_padding"
+        tools:context="com.acabezas.ehealth_patient_app.registration.SignUpActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="Sign Up"
+            android:textColor="@color/colorAccent"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="left"
+            android:text="Personal data"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/name"
+            style="@style/TextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="@string/hint_user_name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:textColor="@color/colorAccent" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/lastname1"
+            style="@style/TextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/lastname1_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="@string/hint_last_name_1"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:textColor="@color/colorAccent" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/lastname2"
+            style="@style/TextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/lastname2_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="@string/hint_last_name_2"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:textColor="@color/colorAccent" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/email"
+            style="@style/TextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/email_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="@string/hint_email"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:textColor="@color/colorAccent" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/password"
+            style="@style/TextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/password_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="@string/hint_password"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:textColor="@color/colorAccent" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="left"
+            android:text="Medical data"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/medicines"
+            style="@style/TextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/medicines_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="@string/hint_medicines"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:textColor="@color/colorAccent" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/allergies"
+            style="@style/TextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/allergies_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="@string/hint_allergies"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:textColor="@color/colorAccent" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/surgeries"
+            style="@style/TextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/surgeries_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="@string/hint_surgeries"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:textColor="@color/colorAccent" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/signup"
+            style="@style/AppTheme.ButtonBase"
+            android:layout_marginBottom="@dimen/field_margin_separator"
+            android:layout_marginTop="@dimen/item_margin_separator"
+            android:text="@string/text_registration"
+            />
+
+    </LinearLayout>
+
+
+
+</ScrollView>
+

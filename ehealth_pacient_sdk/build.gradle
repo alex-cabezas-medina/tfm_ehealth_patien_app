@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion versions.compileSdk
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode versions.code
+        versionName versions.name
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+
+        debug{}
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "environment"
+
+    productFlavors {
+        mock {
+            dimension "environment"
+        }
+        pro {
+            dimension "environment"
+        }
+    }
+
+}
+
+dependencies {
+
+    implementation libraries.supportAppCompat
+    implementation libraries.retrofit
+    implementation libraries.retrofitGsonConverter
+
+    //Testing
+    testCompile libraries.junit
+    androidTestCompile(libraries.espressoCore, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+}

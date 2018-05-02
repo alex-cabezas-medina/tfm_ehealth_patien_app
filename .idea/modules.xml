@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Ehealth_patient_app.iml" filepath="$PROJECT_DIR$/Ehealth_patient_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ehealth_pacient_sdk/ehealth_pacient_sdk.iml" filepath="$PROJECT_DIR$/ehealth_pacient_sdk/ehealth_pacient_sdk.iml" />
     </modules>
   </component>
 </project>

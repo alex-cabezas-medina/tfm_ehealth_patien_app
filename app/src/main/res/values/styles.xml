@@ -8,4 +8,46 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Transparent">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"></style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="android:colorAccent">@android:color/white</item>
+        <item name="android:colorControlNormal">@android:color/white</item>
+        <item name="android:colorControlActivated">@android:color/white</item>
+        <item name="android:colorControlHighlight">@android:color/white</item>
+        <item name="android:backgroundTint">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.ButtonBase">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:minWidth">88dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
 </resources>
