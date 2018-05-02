@@ -5,4 +5,8 @@ package com.acabezas.ehealth_pacient_sdk.model;
  */
 
 public class RateData {
+
+    public int numberOfstars;
+    public String comments;
+    public String appointmentId;
 }

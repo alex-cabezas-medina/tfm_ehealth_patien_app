@@ -5,4 +5,8 @@ package com.acabezas.ehealth_pacient_sdk.callbacks;
  */
 
 public interface RecoverPasswordCallback {
+
+    void success();
+
+    void failure();
 }

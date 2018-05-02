@@ -5,4 +5,8 @@ package com.acabezas.ehealth_patient_app.splash;
  */
 
 public class SplashInteractor implements SplashContracts.Interactor {
+    @Override
+    public void unRegister() {
+
+    }
 }

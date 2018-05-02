@@ -5,4 +5,7 @@ package com.acabezas.ehealth_pacient_sdk.callbacks;
  */
 
 public interface ScheduleAppointmentCallback {
+    void success();
+
+    void failure();
 }

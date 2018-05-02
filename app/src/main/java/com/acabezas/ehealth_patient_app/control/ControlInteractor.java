@@ -5,4 +5,8 @@ package com.acabezas.ehealth_patient_app.control;
  */
 
 public class ControlInteractor implements ControlContracts.Interactor {
+    @Override
+    public void unRegister() {
+
+    }
 }

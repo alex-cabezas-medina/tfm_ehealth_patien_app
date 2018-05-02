@@ -5,4 +5,9 @@ package com.acabezas.ehealth_pacient_sdk.model;
  */
 
 public class ScheduledAppointmentData {
+
+    public String id;
+    public String doctor;
+    public String date;
+    public String specialty;
 }

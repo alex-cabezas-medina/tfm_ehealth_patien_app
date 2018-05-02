@@ -5,4 +5,9 @@ package com.acabezas.ehealth_pacient_sdk.model;
  */
 
 public class ScheduleAppointmentRequest {
+
+    public String date;
+    public String time;
+    public String specialty;
+    public String doctor;
 }

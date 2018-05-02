@@ -5,4 +5,8 @@ package com.acabezas.ehealth_pacient_sdk.callbacks;
  */
 
 public interface RateEvisitCallback {
+
+    void success();
+
+    void failure();
 }

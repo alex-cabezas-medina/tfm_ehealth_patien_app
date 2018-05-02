@@ -5,4 +5,7 @@ package com.acabezas.ehealth_pacient_sdk.model;
  */
 
 public class LoginRequest {
+
+    public String username;
+    public String password;
 }

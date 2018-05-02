@@ -5,4 +5,6 @@ package com.acabezas.ehealth_pacient_sdk.model;
  */
 
 public class RecoverPasswordRequest {
+
+    public String email;
 }
