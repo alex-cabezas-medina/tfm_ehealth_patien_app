@@ -42,6 +42,7 @@ dependencies {
 
     implementation libraries.jodaTime
     implementation libraries.butterKnife
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     annotationProcessor libraries.butterKnifeCompiler
 
     //Testing

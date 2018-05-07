@@ -3,6 +3,7 @@ package com.acabezas.ehealth_patient_app.login;
 import android.app.Activity;
 
 import com.acabezas.ehealth_pacient_sdk.model.LoginRequest;
+import com.acabezas.ehealth_patient_app.Tools.Tools;
 import com.acabezas.ehealth_patient_app.video_conference.VideoConferenceContracts;
 
 /**
@@ -46,10 +47,15 @@ public class LoginPresenter implements LoginContracts.Presenter, LoginContracts.
 
     @Override
     public void doLogin(String username, String password) {
-        LoginRequest request = new LoginRequest();
-        request.username = username;
-        request.password = password;
-        interactor.doLogin(request);
+        if(Tools.isValidEmail(username)) {
+            LoginRequest request = new LoginRequest();
+            request.username = username;
+            request.password = password;
+            interactor.doLogin(request);
+        } else {
+            view.showError(2);
+        }
+
     }
 
     @Override
@@ -59,6 +65,6 @@ public class LoginPresenter implements LoginContracts.Presenter, LoginContracts.
 
     @Override
     public void loginFailed() {
-        view.showError();
+        view.showError(1);
     }
 }

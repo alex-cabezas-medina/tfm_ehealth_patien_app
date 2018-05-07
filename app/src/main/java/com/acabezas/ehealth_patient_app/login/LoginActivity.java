@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.acabezas.ehealth_patient_app.R;
+import com.acabezas.ehealth_patient_app.Tools.AlertDialogCallback;
+import com.acabezas.ehealth_patient_app.Tools.Tools;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -78,7 +80,29 @@ public class LoginActivity extends AppCompatActivity implements LoginContracts.V
     }
 
     @Override
-    public void showError() {
+    public void showError(int error) {
+
+        String title = getResources().getString(R.string.error_title);
+        String message = "";
+
+        switch (error) {
+            case 1:
+                message = getResources().getString(R.string.error_bad_credentials);
+                break;
+            case 2:
+                message = getResources().getString(R.string.error_bad_username);
+                break;
+            case 3 :
+                message = getResources().getString(R.string.error_user_not_exist);
+                break;
+        }
+
+        Tools.createAlertDialog(this,title, message, new AlertDialogCallback() {
+            @Override
+            public void accept() {
+
+            }
+        }).show();
 
     }
 }

@@ -49,6 +49,6 @@ public class RatePresenter implements RateContracts.Presenter, RateContracts.Int
 
     @Override
     public void rateFailed() {
-        view.showError();
+        goToHomeScreen();
     }
 }

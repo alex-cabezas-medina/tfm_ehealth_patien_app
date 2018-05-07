@@ -10,7 +10,7 @@ public class LoginContracts {
 
     interface View {
         void onDestroy();
-        void showError();
+        void showError(int error);
     }
 
     interface Presenter {

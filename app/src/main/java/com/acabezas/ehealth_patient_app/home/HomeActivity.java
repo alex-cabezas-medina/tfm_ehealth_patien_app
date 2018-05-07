@@ -17,6 +17,12 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.acabezas.ehealth_patient_app.R;
+import com.acabezas.ehealth_patient_app.Tools.AlertDialogCallback;
+import com.acabezas.ehealth_patient_app.Tools.Tools;
+import com.acabezas.ehealth_patient_app.appointment_list.AppointmentListActivity;
+import com.acabezas.ehealth_patient_app.login.LoginActivity;
+import com.acabezas.ehealth_patient_app.my_account.MyAccountActivity;
+import com.acabezas.ehealth_patient_app.schedule_appointment.ScheduleAppointmentActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -76,6 +82,10 @@ public class HomeActivity extends AppCompatActivity implements HomeContracts.Vie
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setItemIconTintList(null);
+        navigationView.setNavigationItemSelectedListener(this);
+
         presenter = new HomePresenter(this);
     }
 
@@ -87,8 +97,22 @@ public class HomeActivity extends AppCompatActivity implements HomeContracts.Vie
     }
 
     @Override
-    public void showError() {
+    public void showError(int error) {
+        String title = getResources().getString(R.string.error_title);
+        String message = "";
 
+        switch (error){
+            case 1:
+                message = getResources().getString(R.string.error_video_conference);
+                break;
+        }
+
+        Tools.createAlertDialog(this,title, message, new AlertDialogCallback() {
+            @Override
+            public void accept() {
+
+            }
+        }).show();
     }
 
     @Override
@@ -129,13 +153,15 @@ public class HomeActivity extends AppCompatActivity implements HomeContracts.Vie
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+
+        } else if(id == R.id.nav_account) {
+            MyAccountActivity.startMyAccountActivity(this);
         } else if (id == R.id.nav_scheduled_appointments) {
-
+            AppointmentListActivity.startAppointmentListActivity(this);
         } else if (id == R.id.nav_schedule_appointment) {
-
+            ScheduleAppointmentActivity.startScheduleAppointmentActivity(this);
         } else if (id == R.id.nav_sign_out) {
-
+            LoginActivity.startLoginctivity(this);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

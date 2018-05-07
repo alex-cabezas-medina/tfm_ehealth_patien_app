@@ -8,9 +8,13 @@
     <string name="hint_user_name">Name</string>
     <string name="hint_last_name_1">Last name 1</string>
     <string name="hint_last_name_2">Last name 2</string>
+    <string name="hint_date_of_birth">Date of birth</string>
+    <string name="hint_height">Height</string>
+    <string name="hint_weight">Weight</string>
     <string name="hint_allergies">Allergies</string>
     <string name="hint_medicines">Medicines</string>
     <string name="hint_surgeries">Surgeries</string>
+    <string name="hint_diseases">Diseases</string>
     <string name="hint_date">Date</string>
     <string name="hint_time">Time</string>
     <string name="hint_doctor">Doctor</string>
@@ -22,6 +26,7 @@
 
     <string name="text_login">Sign in</string>
     <string name="text_registration">Sign up</string>
+    <string name="text_save">Save</string>
     <string name="text_recover_password_button">Send mail</string>
     <string name="text_send_email_again">Send mail again</string>
     <string name="text_cancel_button">Cancel</string>

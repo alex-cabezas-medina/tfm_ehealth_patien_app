@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="message_title">Message</string>
+    <string name="message_recover_password_email_sent">If your account existed an email have been sent.</string>
+    <string name="message_signup_success">You have successfully register</string>
+    <string name="message_schedule_success">You have successfully scheduled an appointment</string>
+    <string name="message_update_profile_success">You have successfully updated your profile</string>
+</resources>

@@ -3,6 +3,8 @@ package com.acabezas.ehealth_patient_app.Tools;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
+import android.text.TextUtils;
+import android.util.Patterns;
 
 import com.acabezas.ehealth_patient_app.R;
 
@@ -20,6 +22,7 @@ public class Tools {
                 .setTitle(title)
                 .setPositiveButton(R.string.text_accept, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
                         callback.accept();
                     }
                 })
@@ -28,5 +31,9 @@ public class Tools {
         AlertDialog dialog = builder.create();
 
         return dialog;
+    }
+
+    public static boolean isValidEmail(CharSequence target) {
+        return (!TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches());
     }
 }

@@ -80,20 +80,37 @@ public class SignUpActivity extends AppCompatActivity implements SignUpContracts
     }
 
     @Override
-    public void showError() {
+    public void showError(int error) {
 
+        String title = getResources().getString(R.string.error_title);
+        String message = "";
+
+        switch (error){
+            case 1:
+                message = getResources().getString(R.string.error_bad_connection);
+                break;
+            case 2:
+                message = getResources().getString(R.string.error_bad_username);
+                break;
+            case 3:
+                message = getResources().getString(R.string.error_fields_not_filled);
+                break;
+        }
+
+        Tools.createAlertDialog(this,title, message, new AlertDialogCallback() {
+            @Override
+            public void accept() {
+
+            }
+        }).show();
     }
 
     @Override
     public void showSuccess() {
-        Context context = getApplicationContext();
-        CharSequence text = "Hello toast!";
-        int duration = Toast.LENGTH_SHORT;
+        String title = getResources().getString(R.string.message_title);
+        String message = getResources().getString(R.string.message_signup_success);
 
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
-
-        Tools.createAlertDialog(this,"title", "message", new AlertDialogCallback() {
+        Tools.createAlertDialog(this,title, message, new AlertDialogCallback() {
             @Override
             public void accept() {
                 presenter.goToHomeScreen();

@@ -10,7 +10,7 @@ public class ScheduleAppointmentContracts {
 
     interface View {
         void onDestroy();
-        void showError();
+        void showError(int error);
         void showSuccess();
     }
 

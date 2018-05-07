@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/circle_background"
+            android:src="@drawable/ic_vc_microphone"
             />
 
         <ImageButton
@@ -27,14 +28,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/circle_background"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_vc_camera"/>
 
         <ImageButton
             android:id="@+id/cancel_video_call"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@drawable/red_circle_background" />
+            android:background="@drawable/red_circle_background"
+            android:src="@drawable/ic_vc_phone"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

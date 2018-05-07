@@ -1,17 +1,20 @@
 package com.acabezas.ehealth_pacient_sdk.data_source;
 
 import com.acabezas.ehealth_pacient_sdk.callbacks.GetScheduledAppointmentsCallback;
+import com.acabezas.ehealth_pacient_sdk.callbacks.GetUserProfileDataCallback;
 import com.acabezas.ehealth_pacient_sdk.callbacks.LoginPacientCallback;
 import com.acabezas.ehealth_pacient_sdk.callbacks.RateEvisitCallback;
 import com.acabezas.ehealth_pacient_sdk.callbacks.RecoverPasswordCallback;
 import com.acabezas.ehealth_pacient_sdk.callbacks.ScheduleAppointmentCallback;
 import com.acabezas.ehealth_pacient_sdk.callbacks.SignUpPacientCallback;
+import com.acabezas.ehealth_pacient_sdk.callbacks.UpdateUserProfileDataCallback;
 import com.acabezas.ehealth_pacient_sdk.model.LoginRequest;
 import com.acabezas.ehealth_pacient_sdk.model.RateData;
 import com.acabezas.ehealth_pacient_sdk.model.RecoverPasswordRequest;
 import com.acabezas.ehealth_pacient_sdk.model.ScheduleAppointmentRequest;
 import com.acabezas.ehealth_pacient_sdk.model.ScheduledAppointmentData;
 import com.acabezas.ehealth_pacient_sdk.model.SignUpRequest;
+import com.acabezas.ehealth_pacient_sdk.model.UpdateProfileRequest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -93,5 +96,15 @@ public class LocalDataSource implements PacientDataSource {
         item.date = "12/22/2000";
         data.add(item);
         callback.success(data);
+    }
+
+    @Override
+    public void getUserProfileData(GetUserProfileDataCallback callback) {
+        callback.success(new UpdateProfileRequest());
+    }
+
+    @Override
+    public void updateUserProfileData(UpdateProfileRequest request, UpdateUserProfileDataCallback callback) {
+        callback.success();
     }
 }

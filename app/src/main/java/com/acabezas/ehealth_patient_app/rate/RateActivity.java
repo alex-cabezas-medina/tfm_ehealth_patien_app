@@ -74,11 +74,5 @@ public class RateActivity extends AppCompatActivity implements RateContracts.Vie
 
     @Override
     public void showSuccess() {
-        Tools.createAlertDialog(this,"title", "message", new AlertDialogCallback() {
-            @Override
-            public void accept() {
-
-            }
-        }).show();
     }
 }

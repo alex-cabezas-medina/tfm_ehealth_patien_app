@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.acabezas.ehealth_patient_app">
 
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+
     <application
         android:name=".core.EHealthApplication"
         android:allowBackup="true"
@@ -17,40 +24,36 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".splash.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".login.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".recover_password.RecoverPasswordActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".registration.SignUpActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".rate.RateActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".video_conference.VideoConferenceActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".appointment_list.AppointmentListActivity" />
-
+        <activity android:name=".appointment_list.AppointmentListActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".schedule_appointment.ScheduleAppointmentActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".home.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".my_account.MyAccountActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

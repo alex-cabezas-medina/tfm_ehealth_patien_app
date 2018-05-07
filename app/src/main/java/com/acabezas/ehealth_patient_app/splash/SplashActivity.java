@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity implements SplashContracts
         setContentView(R.layout.activity_splash);
 
         presenter = new SplashPresenter(this);
-        presenter.goToLoginScreen();
+        presenter.showSplash();
     }
 
     @Override

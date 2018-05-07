@@ -6,13 +6,13 @@ import android.app.Activity;
  * Created by alexandercabezas on 9/4/18.
  */
 
-public class SplashPresenter implements SplashContracts.Presenter{
+public class SplashPresenter implements SplashContracts.Presenter, SplashContracts.InteractorOutput{
 
     private SplashContracts.Interactor interactor;
     private SplashContracts.Router router;
 
     SplashPresenter(SplashContracts.View view) {
-        interactor = new SplashInteractor();
+        interactor = new SplashInteractor(this);
         router = new SplashRouter((Activity) view);
     }
 
@@ -25,6 +25,11 @@ public class SplashPresenter implements SplashContracts.Presenter{
     }
 
     @Override
+    public void showSplash() {
+        interactor.handleSplash();
+    }
+
+    @Override
     public void goToLoginScreen() {
         router.presentLoginScreen();
     }
@@ -32,5 +37,10 @@ public class SplashPresenter implements SplashContracts.Presenter{
     @Override
     public void goToOnboardingScreen() {
         router.presentOnboardingScreen();
+    }
+
+    @Override
+    public void endSplash() {
+        goToLoginScreen();
     }
 }

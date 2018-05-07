@@ -3,6 +3,7 @@ package com.acabezas.ehealth_patient_app.recover_password;
 import android.app.Activity;
 
 import com.acabezas.ehealth_pacient_sdk.model.RecoverPasswordRequest;
+import com.acabezas.ehealth_patient_app.Tools.Tools;
 
 /**
  * Created by alexandercabezas on 14/4/18.
@@ -28,9 +29,14 @@ public class RecoverPasswordPresenter implements RecoverPasswordContracts.Presen
 
     @Override
     public void recoverPassword(String email) {
-        RecoverPasswordRequest request = new RecoverPasswordRequest();
-        request.email = email;
-        interactor.recoverPassword(request);
+        if(Tools.isValidEmail(email)) {
+            RecoverPasswordRequest request = new RecoverPasswordRequest();
+            request.email = email;
+            interactor.recoverPassword(request);
+        } else {
+            view.showError(2);
+        }
+
     }
 
     @Override
@@ -45,6 +51,6 @@ public class RecoverPasswordPresenter implements RecoverPasswordContracts.Presen
 
     @Override
     public void recoverPasswordFailed() {
-        view.showError();
+        view.showError(1);
     }
 }

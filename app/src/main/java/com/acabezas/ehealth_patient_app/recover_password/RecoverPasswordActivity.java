@@ -64,13 +64,34 @@ public class RecoverPasswordActivity extends AppCompatActivity implements Recove
     }
 
     @Override
-    public void showError() {
+    public void showError(int error) {
+        String title = getResources().getString(R.string.error_title);
+        String message = "";
 
+        switch (error){
+            case 1:
+                message = getResources().getString(R.string.error_bad_connection);
+                break;
+            case 2:
+                message = getResources().getString(R.string.error_bad_username);
+                break;
+        }
+
+        Tools.createAlertDialog(this,title, message, new AlertDialogCallback() {
+            @Override
+            public void accept() {
+
+            }
+        }).show();
     }
 
     @Override
     public void showSuccess() {
-        Tools.createAlertDialog(this,"title", "message", new AlertDialogCallback() {
+
+        String title = getResources().getString(R.string.message_title);
+        String message = getResources().getString(R.string.message_recover_password_email_sent);
+
+        Tools.createAlertDialog(this,title, message, new AlertDialogCallback() {
             @Override
             public void accept() {
                 presenter.goToLoginScreen();

@@ -5,20 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.acabezas.ehealth_patient_app.appointment_list.AppointmentListActivity">
+    tools:context="com.acabezas.ehealth_patient_app.appointment_list.AppointmentListActivity"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:titleTextColor="@color/colorAccent"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/appointment_list"
         android:scrollbars="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="0dp"
+        android:layout_weight="0.96"/>
 
     <Button
         android:id="@+id/schedule_appointment"
         style="@style/AppTheme.ButtonBase"
         android:layout_marginBottom="@dimen/field_margin_separator"
-        android:layout_marginTop="@dimen/item_margin_separator"
         android:text="@string/text_schedule_appointment"
+        android:layout_weight="0.04"
         />
 
 </LinearLayout>

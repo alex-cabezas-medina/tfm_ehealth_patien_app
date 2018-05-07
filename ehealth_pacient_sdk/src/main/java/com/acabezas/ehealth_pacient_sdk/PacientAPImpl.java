@@ -1,16 +1,19 @@
 package com.acabezas.ehealth_pacient_sdk;
 
 import com.acabezas.ehealth_pacient_sdk.callbacks.GetScheduledAppointmentsCallback;
+import com.acabezas.ehealth_pacient_sdk.callbacks.GetUserProfileDataCallback;
 import com.acabezas.ehealth_pacient_sdk.callbacks.LoginPacientCallback;
 import com.acabezas.ehealth_pacient_sdk.callbacks.RateEvisitCallback;
 import com.acabezas.ehealth_pacient_sdk.callbacks.RecoverPasswordCallback;
 import com.acabezas.ehealth_pacient_sdk.callbacks.ScheduleAppointmentCallback;
 import com.acabezas.ehealth_pacient_sdk.callbacks.SignUpPacientCallback;
+import com.acabezas.ehealth_pacient_sdk.callbacks.UpdateUserProfileDataCallback;
 import com.acabezas.ehealth_pacient_sdk.model.LoginRequest;
 import com.acabezas.ehealth_pacient_sdk.model.RateData;
 import com.acabezas.ehealth_pacient_sdk.model.RecoverPasswordRequest;
 import com.acabezas.ehealth_pacient_sdk.model.ScheduleAppointmentRequest;
 import com.acabezas.ehealth_pacient_sdk.model.SignUpRequest;
+import com.acabezas.ehealth_pacient_sdk.model.UpdateProfileRequest;
 import com.acabezas.ehealth_pacient_sdk.repository.PacientDataRepository;
 
 /**
@@ -63,5 +66,15 @@ public class PacientAPImpl implements PacientAPI{
     @Override
     public void getScheduledAppointments(GetScheduledAppointmentsCallback callback) {
         PacientDataRepository.getInstance().getScheduledAppointments(callback);
+    }
+
+    @Override
+    public void getUserProfileData(GetUserProfileDataCallback callback) {
+        PacientDataRepository.getInstance().getUserProfileData(callback);
+    }
+
+    @Override
+    public void updateUserProfileData(UpdateProfileRequest request, UpdateUserProfileDataCallback callback) {
+        PacientDataRepository.getInstance().updateUserProfileData(request, callback);
     }
 }

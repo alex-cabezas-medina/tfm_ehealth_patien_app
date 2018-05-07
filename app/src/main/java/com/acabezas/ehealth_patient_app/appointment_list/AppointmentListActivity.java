@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 
 import com.acabezas.ehealth_pacient_sdk.model.ScheduledAppointmentData;
 import com.acabezas.ehealth_patient_app.R;
@@ -20,6 +21,8 @@ import butterknife.ButterKnife;
 
 public class AppointmentListActivity extends AppCompatActivity implements AppointmentListContracts.View{
 
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
     @BindView(R.id.appointment_list)
     RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -37,7 +40,9 @@ public class AppointmentListActivity extends AppCompatActivity implements Appoin
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appointment_list);
         ButterKnife.bind(this);
+        setSupportActionBar(toolbar);
 
+        toolbar.setNavigationIcon(R.drawable.ic_left_arrow);
 
         data = new ArrayList<>();
         adapter = new ScheduledAppointmentsAdapter(data);

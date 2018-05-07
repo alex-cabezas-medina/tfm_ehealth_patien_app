@@ -12,15 +12,18 @@ public class SplashContracts {
 
     interface Presenter {
         void onDestroy();
+        void showSplash();
         void goToLoginScreen();
         void goToOnboardingScreen();
     }
 
     interface Interactor {
         void unRegister();
+        void handleSplash();
     }
 
     interface InteractorOutput {
+        void endSplash();
     }
 
 

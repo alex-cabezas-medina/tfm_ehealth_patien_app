@@ -28,12 +28,25 @@ public class ScheduleAppointmentPresenter implements ScheduleAppointmentContract
 
     @Override
     public void scheduleAppointment(String date, String time, String doctor, String specialty) {
-        ScheduleAppointmentRequest request = new ScheduleAppointmentRequest();
-        request.date = date;
-        request.time = time;
-        request.specialty = specialty;
-        request.doctor = doctor;
-        interactor.scheduleAppointment(request);
+
+        if(!date.isEmpty() &&
+                !time.isEmpty() &&
+                !doctor.isEmpty() &&
+                !specialty.isEmpty()) {
+
+            //TODO: checj date higher than today
+            if(!date.isEmpty()) {
+                ScheduleAppointmentRequest request = new ScheduleAppointmentRequest();
+                request.date = date;
+                request.time = time;
+                request.specialty = specialty;
+                request.doctor = doctor;
+                interactor.scheduleAppointment(request);
+            } else {view.showError(2);}
+
+        } else {
+            view.showError(3);
+        }
     }
 
     @Override
@@ -43,6 +56,6 @@ public class ScheduleAppointmentPresenter implements ScheduleAppointmentContract
 
     @Override
     public void scheduleFailed() {
-        view.showSuccess();
+        view.showError(1);
     }
 }

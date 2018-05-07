@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_title">Error</string>
+    <string name="error_bad_credentials">The username or password is incorrect.</string>
+    <string name="error_bad_username">The username does not have the correct format.</string>
+    <string name="error_user_not_exist">The user does not exist, please sign up.</string>
+    <string name="error_bad_connection">An error have occur please check your internet connection.</string>
+    <string name="error_fields_not_filled">All fields must be filled.</string>
+    <string name="error_video_conference">Cannot start video conference.</string>
+    <string name="error_bad_date">The date cannot be lower than today.</string>
+    <string name="error_bad_birthdate">The birth date cannot be lower than today.</string>
+</resources>
